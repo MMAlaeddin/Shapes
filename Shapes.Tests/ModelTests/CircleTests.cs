@@ -11,9 +11,17 @@ namespace Shapes.TestTools
     public void Circle_GetDiameter_DiameterOfCircle()
     {
       Circle newCircle = new Circle(5);
-      int result = newCircle.GetDiameter();
-      Assert.AreEqual(result, 10);
-
+      float result = newCircle.GetDiameter();
+      Assert.AreEqual(result, 10f);
+    }
+    
+    [TestMethod]
+    public void Circle_GetCircumference_CircumOfCircle()
+    {
+      Circle newCircle = new Circle(5);
+      float result = newCircle.GetCircumference();
+      float number = 31.4f;
+      Assert.AreEqual(number, result, .01);
     }
   }
 }
